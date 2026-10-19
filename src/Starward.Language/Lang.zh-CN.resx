@@ -2795,4 +2795,18 @@
   <data name="PlayTimeStatsDialog_StatsTip" xml:space="preserve">
     <value>统计基于游戏运行时长，而不是实际在线时长，仅供参考。</value>
   </data>
+  <data name="SteamCN_Title" xml:space="preserve"><value>绝区零国服 Steam 接入（实验）</value></data>
+  <data name="SteamCN_Description" xml:space="preserve"><value>通过正式 AppID 4162040 启动现有国服客户端。Overlay、游玩时长及账号兼容性需实机验证；不修改游戏文件。</value></data>
+  <data name="SteamCN_Instructions" xml:space="preserve"><value>先在 Steam 正常入库绝区零。完全退出 Steam 后选择游戏库、获取元数据并应用，将下方命令粘贴到 Steam → 绝区零 → 属性 → 启动选项，保留 %command%。关闭自定义启动程序、CMD 启动和登录凭据功能。国服仍由 Starward／米哈游启动器更新。Steam 校验或更新可能下载国际服文件；刷新配置前须退出 Steam。</value></data>
+  <data name="SteamCN_Library" xml:space="preserve"><value>Steam 游戏库（与国服目录分开）</value></data>
+  <data name="SteamCN_Fetch" xml:space="preserve"><value>获取元数据（steamcmd.net）</value></data>
+  <data name="SteamCN_Import" xml:space="preserve"><value>导入 app-info JSON</value></data>
+  <data name="SteamCN_Apply" xml:space="preserve"><value>应用／刷新配置</value></data>
+  <data name="SteamCN_Remove" xml:space="preserve"><value>移除接入配置</value></data>
+  <data name="SteamCN_Command" xml:space="preserve"><value>Steam 启动选项（手动粘贴）</value></data>
+  <data name="SteamCN_Copy" xml:space="preserve"><value>复制命令</value></data>
+  <data name="SteamCN_Enable" xml:space="preserve"><value>Starward 启动按钮使用 Steam</value></data>
+  <data name="SteamCN_GetMetadataFirst" xml:space="preserve"><value>请先获取或导入最新元数据。</value></data>
+  <data name="SteamCN_Applied" xml:space="preserve"><value>已应用。首次启动前请将命令粘贴到 Steam 启动选项；移动国服目录或修改参数后需刷新。</value></data>
+  <data name="SteamCN_Removed" xml:space="preserve"><value>已移除所管理的 Steam 安装配置。请清空 Steam 启动选项中的接入命令以完成恢复；备份和辅助程序保留。</value></data>
 </root>

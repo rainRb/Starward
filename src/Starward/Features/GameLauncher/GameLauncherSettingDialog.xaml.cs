@@ -136,6 +136,7 @@ public sealed partial class GameLauncherSettingDialog : ContentDialog
         CheckCanRepairGame();
         await InitializeBasicInfoAsync();
         InitializeStartArgument();
+        InitializeSteam();
         InitializeCustomBg();
         await InitializeGamePackagesAsync();
     }
