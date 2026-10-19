@@ -2,6 +2,7 @@ During the development of this project, we have benefited from several outstandi
 
 -  [Community Toolkit](https://github.com/CommunityToolkit)
 -  [Dapper](https://github.com/DapperLib/Dapper)
+-  [FusionCache](https://github.com/ZiggyCreatures/FusionCache) (MIT)
 -  [GitHub Markdown CSS](https://github.com/sindresorhus/github-markdown-css)
 -  [grpc-dotnet](https://github.com/grpc/grpc-dotnet)
 -  [HDiffPatch](https://github.com/sisong/HDiffPatch)

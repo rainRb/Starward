@@ -138,6 +138,10 @@
                 <NavigationViewItem Content="{x:Bind lang:Lang.GameLauncherSettingDialog_GamePackages}"
                                     Foreground="{ThemeResource TextFillColorSecondaryBrush}"
                                     Tag="3" />
+                <NavigationViewItem x:Name="NavigationItem_Steam"
+                                    Content="Steam · CN"
+                                    Visibility="Collapsed"
+                                    Tag="4" />
             </NavigationView.MenuItems>
 
 
@@ -684,6 +688,29 @@
                     </Pivot>
                 </FlipViewItem>
 
+                <FlipViewItem>
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <StackPanel Spacing="12" Padding="0,0,12,24">
+                            <TextBlock FontSize="18" Text="{x:Bind lang:Lang.SteamCN_Title}" />
+                            <TextBlock Text="{x:Bind lang:Lang.SteamCN_Description}" TextWrapping="Wrap" />
+                            <TextBlock Text="{x:Bind lang:Lang.SteamCN_Instructions}" TextWrapping="Wrap" />
+                            <ComboBox x:Name="ComboBox_SteamLibrary" HorizontalAlignment="Stretch" Header="{x:Bind lang:Lang.SteamCN_Library}" />
+                            <StackPanel Orientation="Horizontal" Spacing="8">
+                                <Button x:Name="Button_SteamMetadata" Click="Button_SteamMetadata_Click" Content="{x:Bind lang:Lang.SteamCN_Fetch}" />
+                                <Button Click="Button_SteamImport_Click" Content="{x:Bind lang:Lang.SteamCN_Import}" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Spacing="8">
+                                <Button Click="Button_SteamApply_Click" Content="{x:Bind lang:Lang.SteamCN_Apply}" />
+                                <Button Click="Button_SteamRemove_Click" Content="{x:Bind lang:Lang.SteamCN_Remove}" />
+                            </StackPanel>
+                            <TextBlock x:Name="TextBlock_SteamStatus" IsTextSelectionEnabled="True" TextWrapping="Wrap" />
+                            <TextBox x:Name="TextBox_SteamCommand" IsReadOnly="True" TextWrapping="Wrap" Header="{x:Bind lang:Lang.SteamCN_Command}" />
+                            <Button Click="Button_SteamCopy_Click" Content="{x:Bind lang:Lang.SteamCN_Copy}" />
+                            <ToggleSwitch x:Name="Toggle_SteamCN" Toggled="Toggle_SteamCN_Toggled"
+                                          OnContent="{x:Bind lang:Lang.SteamCN_Enable}" OffContent="{x:Bind lang:Lang.SteamCN_Enable}" />
+                        </StackPanel>
+                    </ScrollViewer>
+                </FlipViewItem>
             </FlipView>
 
 

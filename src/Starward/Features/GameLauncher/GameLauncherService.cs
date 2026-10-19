@@ -321,6 +321,12 @@ internal partial class GameLauncherService
             {
                 throw new Exception($"Game is running: {existingProcess.ProcessName}.exe ({existingProcess.Id}).");
             }
+            if (gameId.GameBiz.Value == GameBiz.nap_cn && SteamCnService.Enabled)
+            {
+                string native = Path.Combine(installPath ?? GetGameInstallPath(gameId) ?? "", await GetGameExeNameAsync(gameId));
+                SteamCnService.Launch(native);
+                return await _playTimeRecorderService.StartProcessToLogAsync(gameId);
+            }
             string? exe = null, arg = null, verb = null;
             if (Directory.Exists(installPath))
             {

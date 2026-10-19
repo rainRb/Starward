@@ -1,0 +1,19 @@
+name: Steam CN integration checks
+on:
+  push:
+    branches: ["feat/zzz-cn-steam-launch"]
+  pull_request:
+jobs:
+  isolated-checks:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-dotnet@v5
+        with:
+          global-json-file: global.json
+      - name: Build native launch fixture
+        run: dotnet build tests/SteamCN.FakeGame -c Release
+      - name: Run isolated checks
+        run: dotnet run --project tests/SteamCN -c Release -- '${{ runner.temp }}/steam-cn-fixtures' '${{ github.workspace }}/tests/SteamCN.FakeGame/bin/Release/net10.0/ZenlessZoneZero.exe'
+      - name: Build standalone bridge
+        run: dotnet publish src/Starward.Steam -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true

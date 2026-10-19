@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>Starward.Steam</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../Starward.Core/Steam/SteamBridge.cs" Link="SteamBridge.cs" />
+    <Compile Include="../Starward.Core/Steam/SteamMetadata.cs" Link="SteamMetadata.cs" />
+  </ItemGroup>
+</Project>

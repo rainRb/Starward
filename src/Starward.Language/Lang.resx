@@ -2795,4 +2795,18 @@ You are welcome to submit the exported data to the following repository:</value>
   <data name="PlayTimeStatsDialog_StatsTip" xml:space="preserve">
     <value>Statistics are based on game runtime, not actual playtime, and are for reference only.</value>
   </data>
+  <data name="SteamCN_Title" xml:space="preserve"><value>ZZZ CN via Steam (experimental)</value></data>
+  <data name="SteamCN_Description" xml:space="preserve"><value>Uses official AppID 4162040 to launch your existing CN client. Overlay, playtime and account compatibility require live verification. No game files are modified.</value></data>
+  <data name="SteamCN_Instructions" xml:space="preserve"><value>Add ZZZ to your Steam library first. Exit Steam completely, choose a library, fetch metadata and apply. Copy the command into Steam &gt; ZZZ &gt; Properties &gt; Launch Options. Keep %command%. Disable custom executable, CMD launch and login tickets. CN updates remain in Starward/HoYoPlay. Steam verification or updates can download international files; refresh only with Steam closed.</value></data>
+  <data name="SteamCN_Library" xml:space="preserve"><value>Steam library (separate from the CN client)</value></data>
+  <data name="SteamCN_Fetch" xml:space="preserve"><value>Fetch metadata (steamcmd.net)</value></data>
+  <data name="SteamCN_Import" xml:space="preserve"><value>Import app-info JSON</value></data>
+  <data name="SteamCN_Apply" xml:space="preserve"><value>Apply / refresh setup</value></data>
+  <data name="SteamCN_Remove" xml:space="preserve"><value>Remove managed setup</value></data>
+  <data name="SteamCN_Command" xml:space="preserve"><value>Steam Launch Options (paste manually)</value></data>
+  <data name="SteamCN_Copy" xml:space="preserve"><value>Copy command</value></data>
+  <data name="SteamCN_Enable" xml:space="preserve"><value>Use Steam for the Starward launch button</value></data>
+  <data name="SteamCN_GetMetadataFirst" xml:space="preserve"><value>Fetch or import fresh metadata first.</value></data>
+  <data name="SteamCN_Applied" xml:space="preserve"><value>Setup applied. Paste the command into Steam Launch Options before starting. Refresh after moving the CN game or changing arguments.</value></data>
+  <data name="SteamCN_Removed" xml:space="preserve"><value>Managed Steam install removed. Clear the command in Steam Launch Options to finish. Backups and the helper are retained.</value></data>
 </root>

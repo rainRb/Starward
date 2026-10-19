@@ -61,6 +61,7 @@
 		<PackageReference Include="Vanara.PInvoke.Ole" Version="5.0.7" />
 		<PackageReference Include="Vanara.PInvoke.SetupAPI" Version="5.0.7" />
 		<PackageReference Include="Vanara.PInvoke.Shell32" Version="5.0.7" />
+		<PackageReference Include="ZiggyCreatures.FusionCache" Version="2.9.0" />
 		<Manifest Include="$(ApplicationManifest)" />
 	</ItemGroup>
 
@@ -80,6 +81,20 @@
 	<Target Name="RemoveDlls" AfterTargets="Publish">
 		<Delete Files="$(PublishDir)DirectML.dll" />
 		<Delete Files="$(PublishDir)onnxruntime.dll" />
+	</Target>
+
+	<!-- Stable, standalone bridge survives Starward's versioned app directory updates. -->
+	<Target Name="BuildSteamBridge" AfterTargets="Build" Condition="'$(RuntimeIdentifier)' != ''">
+		<MSBuild Projects="../Starward.Steam/Starward.Steam.csproj" Targets="Restore;Publish"
+		         Properties="Configuration=$(Configuration);Platform=AnyCPU;RuntimeIdentifier=$(RuntimeIdentifier);SelfContained=true;PublishSingleFile=true;PublishDir=$(TargetDir)steam-helper/" />
+	</Target>
+	<Target Name="PublishSteamBridge" BeforeTargets="ComputeFilesToPublish">
+		<ItemGroup>
+			<ResolvedFileToPublish Include="$(TargetDir)steam-helper/Starward.Steam.exe">
+				<RelativePath>steam-helper/Starward.Steam.exe</RelativePath>
+				<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+			</ResolvedFileToPublish>
+		</ItemGroup>
 	</Target>
 
 </Project>
